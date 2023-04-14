@@ -1,0 +1,22 @@
+.list_container {
+    list-style-type: none;
+}
+
+.list_container > li {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+@media (max-width: 850px) {
+    .list_container {
+        margin: 4rem 0 0 2rem;
+    }
+
+    .list_container > li {
+        display: block;
+        margin: 10px 0;
+        text-align: left;
+    }
+}

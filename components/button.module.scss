@@ -1,0 +1,9 @@
+@import 'variables';
+
+.btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    background-color: rgb(10, 10, 10);
+    border: 2px solid $light-color;
+    border-radius: 25px;
+}

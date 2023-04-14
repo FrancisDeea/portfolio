@@ -1,0 +1,12 @@
+$dark-color: #0b132b;
+$medium-color: #1c2541;
+$light-color: #3A506B;
+$text: #77a0d3;
+
+
+@mixin flexbox-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
