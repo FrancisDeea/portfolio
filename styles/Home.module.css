@@ -1,4 +1,13 @@
 
+#section_container {
+    max-width: 800px;
+    display: grid;
+    place-content: center;
+    min-height: calc(100vh - 90px);
+    max-height: min-content;
+}
+
+
 .img_container {
     display: block;
     position: relative;
