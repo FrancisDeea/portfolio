@@ -11,7 +11,8 @@
 
 @media (max-width: 850px) {
     .list_container {
-        margin: 4rem 0 0 2rem;
+        display: absolute;
+        margin: 5rem 0 0 2rem;
     }
 
     .list_container > li {

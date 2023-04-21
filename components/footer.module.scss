@@ -7,3 +7,8 @@
     background-color: $medium-color;
     @include flexbox-row;
 }
+
+.icon {
+    color: red;
+    vertical-align: middle;
+}

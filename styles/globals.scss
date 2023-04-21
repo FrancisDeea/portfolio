@@ -33,6 +33,11 @@ h1 {
     margin-bottom: 0.5rem;
 }
 
+h1, h2 {
+    font-size: 1.8rem;
+
+}
+
 p {
     text-align: justify; 
     color: $text;
@@ -52,6 +57,6 @@ a {
 
 @media (max-width: 850px) {
     a {
-        color: white;
+        color: ghostwhite;
     }
 }

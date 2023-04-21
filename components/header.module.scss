@@ -17,6 +17,10 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+
+    .icon {
+        color: $text;
+    }
 }
 
 .modal {
@@ -25,7 +29,7 @@
     left: 0;
     width: 0vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: $darkest-color;
     transition: width 0.2s cubic-bezier(0.79,0.14,0.15,0.86);
     overflow: hidden;
     z-index: 1;
@@ -35,7 +39,7 @@
         position: absolute;
         top: 2rem;
         right: 2rem;
-        color: white;
+        color: ghostwhite;
         white-space: nowrap;
         border-bottom: 1px solid white;
         padding-bottom: 5px;
