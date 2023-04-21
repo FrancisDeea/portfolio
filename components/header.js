@@ -3,6 +3,7 @@ import styles from './header.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTerminal, faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
 import { useEffect, useState, useRef } from 'react'
+import Link from 'next/link'
 
 export default function Header({ font }) {
     const [widthView, setWidthView] = useState(null);
@@ -48,11 +49,11 @@ export default function Header({ font }) {
                 </>
             ) : (
                 <>
-                    <span className={styles.logo}>
+                    <Link href="/" className={styles.logo}>
                         <FontAwesomeIcon icon={faTerminal} style={{ color: "$", }} />
                         {" "}
                         Hello. I'm Francis.
-                    </span>
+                    </Link>
                     <div className={styles.modal} ref={modalRef}>
                         <Nav key="mobile" onClick={handleClick} />
                         <button className={styles.modal_button} onClick={() => { setShow(!show) }}>
