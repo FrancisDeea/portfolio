@@ -2,7 +2,7 @@ import styles from './article.module.scss';
 import { BsFillPinMapFill, BsCalendar2Check } from "react-icons/bs";
 
 
-export default function Article({ title, description, items }) {
+export default function Article({ title, description, items, key }) {
     
     let itemsMapped;
     if (items !== null) {
@@ -25,7 +25,7 @@ export default function Article({ title, description, items }) {
     }
 
     return (
-        <article className={styles.container}>
+        <article key={key} className={styles.container}>
             <h2 className={styles.title}>{title}</h2>
             <p className={styles.description}>{description}</p>
             {itemsMapped}

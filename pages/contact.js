@@ -15,7 +15,7 @@ export default function Contact() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
             <section className={styles.container}>
-                <h2 className={styles.title}>Let&apos;s talk about business!</h2>
+                <h2 className={styles.title}>Let's talk about business!</h2>
                 <p className={styles.p}>You can contact me on your favorite social network.</p>
                 <div className={styles.social_container}>
                     <a href="https://www.linkedin.com/in/francis-bernal-full-stack-developer/" target="_blank"><BsLinkedin className={styles.icon} /></a>
