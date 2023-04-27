@@ -58,8 +58,9 @@ export default function Header({ font }) {
                     </Link>
                     <div className={styles.modal} ref={modalRef}>
                         <Nav key="mobile" onClick={handleClick} />
+                        <ThemeSelector />
                         <button className={styles.modal_button} onClick={() => { setShow(!show) }}>
-                            <FontAwesomeIcon icon={faArrowLeftLong} style={{ color: "#ffffff", }} />
+                            <FontAwesomeIcon icon={faArrowLeftLong} style={{ color: "var(--text)", }} />
                             {" "}
                             Go back
                         </button>

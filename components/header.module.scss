@@ -40,9 +40,9 @@
         position: absolute;
         top: 2rem;
         right: 2rem;
-        color: ghostwhite;
+        color: var(--text);
         white-space: nowrap;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid var(--text);
         padding-bottom: 5px;
     }
 }

@@ -13,3 +13,9 @@
 .icon {
     font-size: 1.2rem;
 }
+
+@media (max-width: 850px) {
+    .container {
+        margin: 1.5rem auto;
+    }
+}
