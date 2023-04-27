@@ -27,13 +27,13 @@ export default function Home() {
         </div>
         <h1>Hello, I'm Francis. Junior Full-Stack Developer</h1>
         <p>
-          Hello, I’m Francis, a passionate web developer. I love creating websites and applications with javascript, using React and next as my favorite tools.
-          I also master databases with mongodb and postgresql. I don’t separate from my linux terminal, where I use git and bash to manage my projects.
+          Hello, I’m Francis, a passionate web developer. I love creating websites and applications with JavaScript, using React and Next as my favorite tools.
+          I also master databases with MongoDB and Postgresql. I don’t separate from my Linux terminal, where I use Git and Bash to manage my projects.
           I live in the beautiful city of Malaga, but I have no problem working with other time zones or languages, as I speak English quite well.
         </p>
         <div className={styles.btn_container}>
           <Button url="https://google.es" value="Resume" />
-          <Button url="https://google.es" value="Contact" />
+          <Button url="/contact" value="Contact" />
         </div>
       </section>
     </>

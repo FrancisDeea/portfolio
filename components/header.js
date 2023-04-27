@@ -1,4 +1,5 @@
 import Nav from './nav'
+import ThemeSelector from './ThemeSelector'
 import styles from './header.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTerminal, faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
@@ -40,12 +41,13 @@ export default function Header({ font }) {
         <header className={`${styles.container} ${font.className}`}>
             {widthView > 850 ? (
                 <>
-                    <span className={styles.logo}>
+                    <Link href="/" className={styles.logo}>
                         <FontAwesomeIcon icon={faTerminal} style={{ color: "$medium-color", }} />
                         {" "}
                         Hello. I'm Francis.
-                    </span>
+                    </Link>
                     <Nav key="desktop" />
+                    <ThemeSelector />
                 </>
             ) : (
                 <>

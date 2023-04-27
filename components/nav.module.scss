@@ -7,6 +7,13 @@
     width: 100px;
     text-align: center;
     margin: 0 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+@media (min-width: 850px) {
+    .list_container > li:hover {
+        transform: translateY(-3px)
+    }
 }
 
 @media (max-width: 850px) {

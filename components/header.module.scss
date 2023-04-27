@@ -1,15 +1,15 @@
 @import 'variables';
 
 .container {
-    background-color: $dark-color;
+    background-color: var(--dark-color);
     @include flexbox-row;
     width: 100%;
     height: 50px;
-    border-bottom: 1px solid $medium-color;
+    border-bottom: 1px solid var(--border);
 }
 
 .logo {
-    color: $text;
+    color: var(--text);
     font-weight: 600;
 }
 
@@ -20,7 +20,7 @@
     cursor: pointer;
 
     .icon {
-        color: $text;
+        color: var(--text);
     }
 }
 
@@ -30,7 +30,7 @@
     left: 0;
     width: 0vw;
     height: 100vh;
-    background-color: $darkest-color;
+    background-color: var(--darkest-color);
     transition: width 0.2s cubic-bezier(0.79,0.14,0.15,0.86);
     overflow: hidden;
     z-index: 1;

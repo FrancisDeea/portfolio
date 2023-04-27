@@ -91,4 +91,4 @@ export const projects = [
         stack: ["MongoDB", "Mongoose", "Node", "Express", "HTML"],
         url: "https://backend-project-urlshortener.francisdeea.repl.co"
     },
-]
+];
