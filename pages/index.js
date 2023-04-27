@@ -25,7 +25,7 @@ export default function Home() {
                       30vw"
           />
         </div>
-        <h1>Hello, I'm Francis. Junior Full-Stack Developer</h1>
+        <h1>Hello, I&apos;m Francis. Junior Full-Stack Developer</h1>
         <p>
           Hello, I’m Francis, a passionate web developer. I love creating websites and applications with JavaScript, using React and Next as my favorite tools.
           I also master databases with MongoDB and Postgresql. I don’t separate from my Linux terminal, where I use Git and Bash to manage my projects.

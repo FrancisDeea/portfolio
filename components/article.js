@@ -8,7 +8,7 @@ export default function Article({ title, description, items }) {
     if (items !== null) {
         itemsMapped = items.map(item => {
             return (
-                <div className={styles.item_container}>
+                <div key={item.name} className={styles.item_container}>
                     {
                         item.url === null
                             ? <h3>{item.name}</h3>

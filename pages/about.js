@@ -48,6 +48,7 @@ export default function About() {
                             info.map(item => {
                                 return (
                                     <Article
+                                        key={item.title}
                                         title={item.title}
                                         description={item.description}
                                         items={item.items}
