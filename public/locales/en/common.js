@@ -1,4 +1,4 @@
-{
+export default {
     "logo": "Hello. I'm Francis.",
     "nav": {
         "1": "Home",

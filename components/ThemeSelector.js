@@ -1,10 +1,13 @@
 import styles from './ThemeSelector.module.scss';
+
 import { useState, useEffect } from 'react'
+
 import { useTheme } from 'next-themes'
+
 import { BsSun, BsMoon } from 'react-icons/bs'
 
 
-export default function ThemeSelector() {
+export default function ThemeSelector({ lang }) {
     const { theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false)
 
@@ -28,8 +31,8 @@ export default function ThemeSelector() {
         <div className={styles.container} onClick={handleClick}>
             {
                 theme == 'dark'
-                    ? <><BsMoon className={styles.icon} /> Dark Mode</>
-                    : <><BsSun className={styles.icon} /> Light Mode</>
+                    ? <><BsMoon className={styles.icon} /> {lang["btn-dark-mode"]}</>
+                    : <><BsSun className={styles.icon} /> {lang["btn-light-mode"]}</>
             }
         </div>
     )
