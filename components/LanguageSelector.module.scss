@@ -1,0 +1,41 @@
+@import './variables';
+
+.container {
+    @include btn;
+    @include flexbox-row;
+    justify-content: center;
+    width: 130px;
+    min-width: max-content;
+    font-size: 0.9rem;
+    height: 35px;
+
+    span {
+        display: block;
+        width: 100%;
+    }
+
+    ul {
+        list-style: none;
+        @include flexbox-row;
+        justify-content: center;
+        column-gap: 15px;
+
+        li {
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        li:hover {
+            padding: 0.3rem;
+            border-radius: 5px;
+            background-color: var(--medium-color);
+
+            .link {
+                color: var(--text);
+            }
+        }
+    }
+}
+
+.container:hover .link {
+    color: var(--darkest-color)
+}

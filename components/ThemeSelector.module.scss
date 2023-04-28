@@ -5,17 +5,11 @@
     @include flexbox-row;
     column-gap: 0.3rem;
     justify-content: center;
-    width: max-content;
+    width: 130px;
     font-size: 0.8rem;
-    padding: 0.4rem 0.6rem;
+    height: 35px;
 }
 
 .icon {
     font-size: 1.2rem;
-}
-
-@media (max-width: 850px) {
-    .container {
-        margin: 1.5rem auto;
-    }
 }

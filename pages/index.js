@@ -3,8 +3,12 @@ import Image from 'next/image'
 import profilePic from '/public/assets/profile.jpg'
 import styles from '@components/styles/Home.module.css'
 import Button from '../components/button'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
 export default function Home() {
+  const { t } = useTranslation('index')
+
   return (
     <>
       <Head>
@@ -25,17 +29,23 @@ export default function Home() {
                       30vw"
           />
         </div>
-        <h1>Hello, I&apos;m Francis. Junior Full-Stack Developer</h1>
-        <p>
-          Hello, I’m Francis, a passionate web developer. I love creating websites and applications with JavaScript, using React and Next as my favorite tools.
-          I also master databases with MongoDB and Postgresql. I don’t separate from my Linux terminal, where I use Git and Bash to manage my projects.
-          I live in the beautiful city of Malaga, but I have no problem working with other time zones or languages, as I speak English quite well.
-        </p>
+        <h1>{t('h1')}</h1>
+        <p>{t('description')}</p>
         <div className={styles.btn_container}>
-          <Button url="https://google.es" value="Resume" />
-          <Button url="/contact" value="Contact" />
+          <Button url="https://google.es" value={t('btn1')} />
+          <Button url="/contact" value={t('btn2')} />
         </div>
       </section>
     </>
   )
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, [
+        'index'
+      ])),
+    },
+  }
 }

@@ -1,12 +1,19 @@
-import Nav from './nav'
-import ThemeSelector from './ThemeSelector'
-import styles from './header.module.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faTerminal, faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
-import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 
-export default function Header({ font }) {
+import { useEffect, useState, useRef } from 'react'
+
+import Nav from './nav'
+import LanguageSelector from './LanguageSelector'
+import ThemeSelector from './ThemeSelector'
+
+import styles from './header.module.scss'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faTerminal, faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
+
+
+export default function Header({ font, t }) {
+
     const [widthView, setWidthView] = useState(null);
     const [show, setShow] = useState(false);
     const modalRef = useRef(null);
@@ -44,10 +51,13 @@ export default function Header({ font }) {
                     <Link href="/" className={styles.logo}>
                         <FontAwesomeIcon icon={faTerminal} style={{ color: "$medium-color", }} />
                         {" "}
-                        Hello. I'm Francis.
+                        {t}
                     </Link>
                     <Nav key="desktop" />
-                    <ThemeSelector />
+                    <div className={styles.selector_container}>
+                        <LanguageSelector />
+                        <ThemeSelector />
+                    </div>
                 </>
             ) : (
                 <>
@@ -58,7 +68,10 @@ export default function Header({ font }) {
                     </Link>
                     <div className={styles.modal} ref={modalRef}>
                         <Nav key="mobile" onClick={handleClick} />
-                        <ThemeSelector />
+                        <div className={styles.selector_container}>
+                            <LanguageSelector />
+                            <ThemeSelector />
+                        </div>
                         <button className={styles.modal_button} onClick={() => { setShow(!show) }}>
                             <FontAwesomeIcon icon={faArrowLeftLong} style={{ color: "var(--text)", }} />
                             {" "}
