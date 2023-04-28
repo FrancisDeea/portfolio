@@ -1,8 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
+
 import profilePic from '/public/assets/profile.jpg'
 import styles from '@components/styles/Home.module.css'
+
 import Button from '../components/button'
+
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 

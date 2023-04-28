@@ -1,11 +1,21 @@
 import Head from 'next/head'
+import { useRouter } from 'next/router'
+
 import { useState } from 'react'
+
 import styles from '../styles/projects.module.scss'
+
 import Project from '../components/project'
+
 import { projects } from '../utils/data'
 
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
+
 export default function Projects() {
-    const [filter, setFilter] = useState("all");    
+    const [filter, setFilter] = useState("all");
+    const { locale } = useRouter();
+    const { t } = useTranslation('projects')
 
     let data;
 
@@ -30,9 +40,9 @@ export default function Projects() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
             <section className={styles.container}>
-                <h2>Check out my latest projects</h2>
+                <h2>{t('title')}</h2>
                 <div className={styles.filter_container}>
-                    <button className={styles.filter_btn} onClick={() => setFilter("all")}>All</button>
+                    <button className={styles.filter_btn} onClick={() => setFilter("all")}>{t('All')}</button>
                     <button className={styles.filter_btn} onClick={() => setFilter("front")}>Front-end</button>
                     <button className={styles.filter_btn} onClick={() => setFilter("back")}>Back-end</button>
                 </div>
@@ -43,7 +53,7 @@ export default function Projects() {
                                 key={project.id}
                                 img={project.img}
                                 name={project.name}
-                                description={project.description}
+                                description={locale === "en" ? project.description : project.description2}
                                 stack={project.stack}
                                 url={project.url}
                                 show={project.type === filter}
@@ -56,3 +66,13 @@ export default function Projects() {
         </>
     )
 }
+
+export async function getStaticProps({ locale }) {
+    return {
+      props: {
+        ...(await serverSideTranslations(locale, [
+          'projects'
+        ])),
+      },
+    }
+  }

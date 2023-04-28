@@ -7,6 +7,7 @@ export const projects = [
         name: "Todo-list app",
         description: `A simple todo-list-app created with React using hooks like useState and useEffect.
                         The data is stored and managed using window.localStorage Web API.`,
+        description2: "Lista de tareas creada con React usando hooks como useState y useEffect. Los datos se almacenan mediante window.localStorage Web API.",
         stack: ["React", "JavaScript", "HTML", "CSS"],
         url: "https://todolist-app-react-iota.vercel.app/"
     },
@@ -18,6 +19,7 @@ export const projects = [
         type: "front",
         name: "25-5 clock app",
         description: `Pomodoro App created with React using class components, timer functions and sound effects.`,
+        description2: `Pomodoro App creada con React usando componentes de clase, funciones de temporizador y efectos de sonido.`,
         stack: ["React", "JavaScript", "HTML", "SCSS"],
         url: "https://25-5-clock-ten.vercel.app/"
     },
@@ -28,6 +30,7 @@ export const projects = [
         type: "front",
         name: "Calculator",
         description: `A simple calculator app created with React using complex logic, ternary expressions, regex and inmutability.`,
+        description2: `Una aplicación de calculadora simple creada con React usando lógica compleja, expresiones ternarias, regex e inmutabilidad.`,
         stack: ["React", "JavaScript", "HTML", "SCSS"],
         url: "https://new-calculator-six.vercel.app/"
     },
@@ -38,6 +41,7 @@ export const projects = [
         type: "front",
         name: "Drum machine",
         description: `An interactive drum machine created with React using state, props and playing with DOM, eventListeners and sound effects.`,
+        description2: `Pad de ritmos interactivo creado con React usando state, props y jugando con DOM, eventListeners y efectos de sonidos.`,
         stack: ["React", "JavaScript", "HTML", "CSS"],
         url: "https://new-drum-machine.vercel.app/"
     },
@@ -48,6 +52,7 @@ export const projects = [
         type: "front",
         name: "Random Quote machine",
         description: `A simple app that shows random quotes fetching an external api.`,
+        description2: `Una aplicación simple que muestra citas aleatorias obtenidas de una API externa.`,
         stack: ["React", "JavaScript", "HTML", "CSS"],
         url: "https://new-random-quote-machine.vercel.app/"
     },
@@ -58,6 +63,7 @@ export const projects = [
         type: "front",
         name: "Markdown Previewer",
         description: `A Markdown application in which you can write in Marked language and parse automatically to HTML.`,
+        description2: `Una aplicación Markdown en la que puedes escribir en lenguaje marcado y parsear automáticamente en HTML.`,
         stack: ["React", "JavaScript", "HTML", "CSS"],
         url: "https://new-markdown-previewer.vercel.app/"
     },
@@ -68,6 +74,7 @@ export const projects = [
         type: "back",
         name: "Exercise Tracker",
         description: `Exercise tracking application that saves both users and exercises in database.`,
+        description2: `Aplicación de seguimiento de ejercicios que guarda tanto usuarios como ejercicios en base de datos.`,
         stack: ["MongoDB", "Mongoose", "Node", "Express", "HTML"],
         url: "https://exercise-tracker.francisdeea.repl.co"
     },
@@ -78,6 +85,7 @@ export const projects = [
         type: "back",
         name: "File Metadata microservice",
         description: `Upload a file and get metadata about it`,
+        description2: `Sube un archivo y recibe metadata sobre él`,
         stack: ["Node", "Express", "HTML"],
         url: "https://backend-project-filemetadata.francisdeea.repl.co/"
     },
@@ -88,6 +96,7 @@ export const projects = [
         type: "back",
         name: "Url Shortener microservice",
         description: `App checks if an Domain is a valid hostname and then stores it in database with a number fast access.`,
+        description2: `Comprueba si el dominio es válido y luego lo almacena en BBDD con un número de acceso rápido.`,
         stack: ["MongoDB", "Mongoose", "Node", "Express", "HTML"],
         url: "https://backend-project-urlshortener.francisdeea.repl.co"
     },
