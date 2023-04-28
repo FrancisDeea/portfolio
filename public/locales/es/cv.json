@@ -1,0 +1,84 @@
+[
+    {
+        "title": "Resumen",
+        "description": "Con experiencia en front-end, utilizando Javascript y React como tecnologías principales. 1 año y medio de experiencia mezclando proyectos personales, trabajos esporádicos y formación autodidacta. Dejé mi último trabajo no relacionado con el sector para terminar de afinar mi aprendizaje. Actualmente buscando un puesto como Desarrollador Junior.",
+        "items": null
+
+    },
+
+    {
+        "title": "Educación",
+        "description": "Casi todos mis conocimientos sobre desarrollo web y programación los he aprendido a distancia de forma autodidacta. Además de proyectos personales, aprendo mucho frecuentando las principales plataformas online para desarrolladores y leyendo documentación oficial.",
+        "items": [
+            {
+                "name": "C.F.G.S. administración y finanzas",
+                "url": null,
+                "description": "Aprendí sobre organización y gestión de empresas, impuestos y contabilidad en general.",
+                "location": "Málaga, España",
+                "date": "2013 - 2015"
+            },
+
+            {
+                "name": "Responsive Web Design",
+                "url": "https://www.freecodecamp.org/certification/francis-frontend/responsive-web-design",
+                "description": "300 horas aproximadamente sobre técnicas modernas de HTML y CSS como Flexbox, Grid, variables, media queries y también las mejores prácticas para la accesibilidad.",
+                "location": "FreeCodeCamp",
+                "date": "Marzo - 2021"
+            },
+
+            {
+                "name": "JavaScript Algorithms and Data Structures",
+                "url": "https://www.freecodecamp.org/certification/francis-frontend/javascript-algorithms-and-data-structures",
+                "description": "300 horas aproximadamente sobre fundamentos de JS incluyendo variables, arrays, objetos, bucles y funciones. Programación Orientada a Objetos (POO) y Programación Funcional (PF).",
+                "location": "FreeCodeCamp",
+                "date": "Marzo - 2022"
+            },
+
+            {
+                "name": "Front End Development Libraries",
+                "url": "https://www.freecodecamp.org/certification/francis-frontend/front-end-development-libraries",
+                "description": "Mejora de habilidades aprendiendo las librerías front-end más populares: React y Redux. También aprendé CSS avanzado con SASS/SCSS y Bootstrap.",
+                "location": "FreeCodeCamp",
+                "date": "Durante 2022"
+            },
+
+            {
+                "name": "Relational Database",
+                "url": "https://www.freecodecamp.org/certification/francis-frontend/relational-database-v8",
+                "description": "300 horas aproximadamente sobre PostgreSQL usando herramientas reales de desarrollador incluyendo VS Code, Git y scripting en Bash.",
+                "location": "FreeCodeCamp",
+                "date": "Enero - 2023"
+            },
+
+            {
+                "name": "Back End Development and APIs",
+                "url": "https://www.freecodecamp.org/certification/francis-frontend/back-end-development-and-apis",
+                "description": "Aprendí a codificar aplicaciones back-end con Node y Express gestionando bases de datos con MongoDB, Mongoose y Atlas.",
+                "location": "FreeCodeCamp",
+                "date": "Enero/Marzo - 2023"
+            }
+        ]
+    },
+
+    {
+        "title": "Experiencia",
+        "description": "Mi experiencia real como desarrollador consiste en un año como autónomo y múltiples proyectos autodidactas. Actualmente busco mi primer puesto junior en una empresa.",
+        "items": [
+            {
+                "name": "Trabajador autónomo",
+                "url": "https://www.freecodecamp.org/certification/francis-frontend/back-end-development-and-apis",
+                "description": "Desarrollador web con WordPress y HTML/CSS/JS. Trabajos de SEO y gestión de hosting.",
+                "location": "Málaga, España",
+                "date": "2018"
+            }
+        ]
+
+    },
+
+    {
+        "title": "Actualmente",
+        "description": "Actualmente estoy desarrollando una aplicación web para un restaurante situado en Torremolinos y aprendiendo Next.js, un framework de React.",
+        "items": null
+
+    }
+]

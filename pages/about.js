@@ -1,14 +1,27 @@
 import styles from '../styles/about.module.scss'
 import profilePic from '../public/assets/profile.jpg'
+
 import Image from 'next/image'
 import Head from 'next/head'
+
 import Button from '../components/button'
 import Article from '../components/article'
+
+import { useRouter } from 'next/router'
+
+import en from '../public/locales/en/cv'
+import es from '../public/locales/es/cv'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
+
 import { info } from '../utils/personal'
 import { BsLinkedin, BsFillPinMapFill, BsSuitHeartFill } from "react-icons/bs";
 
 
 export default function About() {
+    const { t } = useTranslation('about')
+    const { locale } = useRouter();
+    const infos = locale === "en" ? en : es;
 
     return (
         <>
@@ -18,7 +31,7 @@ export default function About() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
             <section className={styles.container}>
-                <h2 className={styles.title}>Discover all you need to know about me</h2>
+                <h2 className={styles.title}>{t('title')}</h2>
                 <div className={styles.column_container}>
                     <aside className={styles.aside_container}>
                         <figure className={styles.fig}>
@@ -39,13 +52,13 @@ export default function About() {
                             <li><BsLinkedin className={`${styles.icon} ${styles.linked}`} /><span>LinkedIn</span></li>
                         </ul>
                         <div className={styles.btn_container}>
-                            <Button url="/contact" value="Contact" />
-                            <Button url="https://google.es" value="Resume" />
+                            <Button url="/contact" value={t('btn')} />
+                            <Button url="https://google.es" value={t('btn2')} />
                         </div>
                     </aside>
                     <div className={styles.article_container}>
                         {
-                            info.map(item => {
+                            infos.map(item => {
                                 return (
                                     <Article
                                         key={item.title}
@@ -62,3 +75,13 @@ export default function About() {
         </>
     )
 }
+
+export async function getStaticProps({ locale }) {
+    return {
+      props: {
+        ...(await serverSideTranslations(locale, [
+          'about'
+        ])),
+      },
+    }
+  }
