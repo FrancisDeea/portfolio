@@ -25,32 +25,50 @@
 }
 
 .modal {
+    @include flexbox-column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    row-gap: 30px;
+
     position: absolute;
     top: 0;
     left: 0;
     width: 0vw;
     height: 100vh;
-    background-color: var(--darkest-color);
+
+    padding: 6rem 0 0 2rem;
+    background-color: var(--dark-color);
     transition: width 0.2s cubic-bezier(0.79, 0.14, 0.15, 0.86);
     overflow: hidden;
     z-index: 2;
 
     .modal_button {
         @extend .nav_button;
+        font-size: 1.5rem;
+        color: var(--text);
+
         position: absolute;
         top: 2rem;
         right: 2rem;
-        color: var(--text);
-        white-space: nowrap;
-        border-bottom: 1px solid var(--text);
-        padding-bottom: 5px;
     }
-}
 
-.selector_container {
-    @include flexbox-row;
-    justify-content: center;
-    column-gap: 10px;
+    .small_container {
+        @include flexbox-column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        row-gap: 10px;
+
+        hr {
+            width: 50vw;
+            height: 1px;
+            border: none;
+            border-top: 1px solid;
+        }
+    }
+
+    .profession {
+        font-size: 0.9rem;
+    }
 }
 
 .overlay {
@@ -62,14 +80,4 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.80);
     z-index: 1;    
-}
-
-@media (max-width: 850px) {
-    .selector_container {
-        @include flexbox-column;
-        justify-content: center;
-        align-items: center;
-        row-gap: 10px;
-        margin: 1.5rem auto;
-    }
 }

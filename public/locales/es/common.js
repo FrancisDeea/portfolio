@@ -6,7 +6,7 @@ export default {
         "3": "Sobre mí",
         "4": "Contacto"
     },
-    "btn-modal": "Ir atrás",
+    "btn-modal": "Salir",
     "btn-lang": "Idioma",
     "btn-es": "Español",
     "btn-en": "Ingles",

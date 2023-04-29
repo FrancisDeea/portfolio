@@ -6,7 +6,7 @@ export default {
         "3": "About me",
         "4": "Contact"
     },
-    "btn-modal": "Go back",
+    "btn-modal": "Exit",
     "btn-lang": "Language",
     "btn-es": "Spanish",
     "btn-en": "English",

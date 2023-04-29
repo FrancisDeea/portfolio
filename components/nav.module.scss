@@ -17,11 +17,7 @@
     }
 }
 
-@media (max-width: 850px) {
-    .list_container {
-        margin: 5rem 0 0 2rem;
-    }
-
+@media (max-width: 1023px) {
     .list_container > li {
         display: block;
         margin: 10px 0;

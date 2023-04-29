@@ -20,9 +20,17 @@ export default function Header({ font, lang }) {
     const overlayRef = useRef(null);
 
     function handleClick() {
-        if (modalRef.current.style.width !== '0vw') {
+        const modal = modalRef.current;
+        const overlay = overlayRef.current;
+
+        if (!show) {
+            modal.style.width = "70vw";
+            overlay.style.display = "block";
+            setShow(true)
+        } else {
             modalRef.current.style.width = "0vw";
-            setShow(false);
+            overlay.style.display = "none";
+            setShow(false)
         }
     }
 
@@ -37,22 +45,10 @@ export default function Header({ font, lang }) {
         return () => window.removeEventListener("resize", handleResize);
     }, [widthView]);
 
-    useEffect(() => {
-        const overlay = overlayRef.current;
-        const modal = modalRef.current;
-
-        if (show) {
-            modal.style.width = "70vw";
-        }
-
-        return () => {
-            modal.style.width = "0vw";
-        }
-    }, [show])
 
     return (
         <header className={`${styles.container} ${font.className}`}>
-            {widthView > 850 ? (
+            {widthView > 1023 ? (
                 <>
                     <Link href="/" className={styles.logo}>
                         <FontAwesomeIcon icon={faTerminal} style={{ color: "$medium-color", }} />
@@ -72,22 +68,35 @@ export default function Header({ font, lang }) {
                         {" "}
                         {lang.logo}
                     </Link>
+
                     <div className={styles.modal} ref={modalRef}>
-                        <Nav onClick={handleClick} lang={lang} />
-                        <div className={styles.selector_container}>
-                            <LanguageSelector lang={lang} />
-                            <ThemeSelector lang={lang} />
+                        <div className={styles.small_container}>
+                            <p>Francisco Javier Bernal Cabra <br /> <span className={styles.profession}>Junior Full-Stack Developer</span></p>
+                            <hr />
+                            <Nav onClick={handleClick} lang={lang} />
                         </div>
-                        <button className={styles.modal_button} onClick={() => { setShow(!show) }}>
+
+                        <div className={styles.small_container}>
+                            <p>Settings:</p>
+                            <hr />
+                            <div>
+                                <LanguageSelector lang={lang} />
+                                <ThemeSelector lang={lang} />
+                            </div>
+                        </div>
+
+                        <button className={styles.modal_button} onClick={handleClick}>
                             <FontAwesomeIcon icon={faArrowLeftLong} style={{ color: "var(--text)", }} />
                             {" "}
-                            {lang["btn-modal"]}
                         </button>
                     </div>
-                    <div className={styles.overlay} ref={overlayRef} onClick={handleClick}></div>
-                    <button className={styles.nav_button} onClick={() => setShow(!show)}>
+
+                    <button className={styles.nav_button} onClick={handleClick}>
                         <FontAwesomeIcon icon={faBars} className={styles.icon} />
                     </button>
+
+                    <div className={styles.overlay} ref={overlayRef} onClick={handleClick}></div>
+
                 </>
             )}
         </header>
