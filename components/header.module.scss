@@ -31,10 +31,10 @@
     width: 0vw;
     height: 100vh;
     background-color: var(--darkest-color);
-    transition: width 0.2s cubic-bezier(0.79,0.14,0.15,0.86);
+    transition: width 0.2s cubic-bezier(0.79, 0.14, 0.15, 0.86);
     overflow: hidden;
-    z-index: 1;
-    
+    z-index: 2;
+
     .modal_button {
         @extend .nav_button;
         position: absolute;
@@ -53,6 +53,17 @@
     column-gap: 10px;
 }
 
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.80);
+    z-index: 1;    
+}
+
 @media (max-width: 850px) {
     .selector_container {
         @include flexbox-column;
@@ -62,4 +73,3 @@
         margin: 1.5rem auto;
     }
 }
-

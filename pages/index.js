@@ -28,7 +28,7 @@ export default function Home() {
             fill
             priority
             sizes="(max-width: 850px) 40vw,
-                    (max-width: 410px) 50vw,
+                    (max-width: 410px) 60vw,
                       30vw"
           />
         </div>

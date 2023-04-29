@@ -17,6 +17,7 @@ export default function Header({ font, lang }) {
     const [widthView, setWidthView] = useState(null);
     const [show, setShow] = useState(false);
     const modalRef = useRef(null);
+    const overlayRef = useRef(null);
 
     function handleClick() {
         if (modalRef.current.style.width !== '0vw') {
@@ -37,11 +38,16 @@ export default function Header({ font, lang }) {
     }, [widthView]);
 
     useEffect(() => {
+        const overlay = overlayRef.current;
+        const modal = modalRef.current;
+
         if (show) {
-            modalRef.current.style.width = "60vw"
+            modal.style.width = "70vw";
         }
 
-        return () => modalRef.current.style.width = "0vw"
+        return () => {
+            modal.style.width = "0vw";
+        }
     }, [show])
 
     return (
@@ -53,7 +59,7 @@ export default function Header({ font, lang }) {
                         {" "}
                         {lang.logo}
                     </Link>
-                    <Nav key="desktop" lang={lang} />
+                    <Nav lang={lang} />
                     <div className={styles.selector_container}>
                         <LanguageSelector lang={lang} />
                         <ThemeSelector lang={lang} />
@@ -67,7 +73,7 @@ export default function Header({ font, lang }) {
                         {lang.logo}
                     </Link>
                     <div className={styles.modal} ref={modalRef}>
-                        <Nav key="mobile" onClick={handleClick} lang={lang} />
+                        <Nav onClick={handleClick} lang={lang} />
                         <div className={styles.selector_container}>
                             <LanguageSelector lang={lang} />
                             <ThemeSelector lang={lang} />
@@ -78,6 +84,7 @@ export default function Header({ font, lang }) {
                             {lang["btn-modal"]}
                         </button>
                     </div>
+                    <div className={styles.overlay} ref={overlayRef} onClick={handleClick}></div>
                     <button className={styles.nav_button} onClick={() => setShow(!show)}>
                         <FontAwesomeIcon icon={faBars} className={styles.icon} />
                     </button>
