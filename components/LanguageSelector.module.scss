@@ -1,41 +1,46 @@
 @import './variables';
 
 .container {
-    @include btn;
     @include flexbox-row;
     justify-content: center;
-    width: 130px;
-    min-width: max-content;
+    column-gap: 10px;
+
+    border: 2px solid var(--text);
+    border-radius: 15px;
+    background: transparent;
+
     font-size: 0.9rem;
-    height: 35px;
+    font-weight: 600;
 
-    span {
-        display: block;
-        width: 100%;
+    position: relative;
+    padding: 0px 8px;
+    height: 26px;
+    width: 100px;
+    transition: width 300ms ease-in;
+    overflow: hidden;
+    cursor: pointer;
+
+    .btn_lang {
+        border: none;
+        background: transparent;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: opacity 200ms ease-in-out;
+        cursor: pointer;
     }
 
-    ul {
-        list-style: none;
+    p {
+        font-size: 0.9rem;
+    }
+
+    .container_lang {
         @include flexbox-row;
-        justify-content: center;
-        column-gap: 15px;
+        column-gap: 10px;
+        
+        white-space: nowrap;
 
-        li {
-            transition: background-color 0.2s ease-in-out;
-        }
-
-        li:hover {
-            padding: 0.3rem;
-            border-radius: 5px;
-            background-color: var(--medium-color);
-
-            .link {
-                color: var(--text);
-            }
-        }
+        position: absolute;
+        inset: 30px;
+        transition: all 200ms ease-in-out 300ms;
     }
-}
-
-.container:hover .link {
-    color: var(--darkest-color)
 }

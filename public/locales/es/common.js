@@ -7,9 +7,10 @@ export default {
         "4": "Contacto"
     },
     "btn-modal": "Salir",
-    "btn-lang": "Idioma",
-    "btn-es": "Español",
-    "btn-en": "Ingles",
+    "btn-lang": "Translate",
+    "btn-es": "Spanish",
+    "btn-en": "English",
+    "select": "Select language:",
     "btn-dark-mode": "Modo oscuro",
     "btn-light-mode": "Modo claro",
 }

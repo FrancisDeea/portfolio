@@ -7,9 +7,10 @@ export default {
         "4": "Contact"
     },
     "btn-modal": "Exit",
-    "btn-lang": "Language",
-    "btn-es": "Spanish",
-    "btn-en": "English",
+    "btn-lang": "Idioma",
+    "btn-es": "Español",
+    "btn-en": "Inglés",
+    "select": "Selecciona idioma:",
     "btn-dark-mode": "Dark Mode",
     "btn-light-mode": "Light Mode",
     "footer": "Created with <BsFillHeartFill className={styles.icon} /> by <strong>Francis Bernal</strong>"

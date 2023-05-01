@@ -24,7 +24,7 @@ export default function Header({ font, lang }) {
         const overlay = overlayRef.current;
 
         if (!show) {
-            modal.style.width = "70vw";
+            modal.style.width = "80vw";
             overlay.style.display = "block";
             setShow(true)
         } else {
@@ -55,9 +55,11 @@ export default function Header({ font, lang }) {
                         {" "}
                         {lang.logo}
                     </Link>
+
                     <Nav lang={lang} />
+
                     <div className={styles.desktop_setting_container}>
-                        <LanguageSelector lang={lang} />
+                        <LanguageSelector lang={lang} font={font} />
                         <ThemeSelector lang={lang} />
                     </div>
                 </>
@@ -71,7 +73,7 @@ export default function Header({ font, lang }) {
 
                     <div className={styles.modal} ref={modalRef}>
                         <div className={styles.small_container}>
-                            <p>Francisco Javier Bernal Cabra <br /> <span className={styles.profession}>Junior Full-Stack Developer</span></p>
+                            <p>Francisco Javier <br />Bernal Cabra <br /> <span className={styles.profession}>Junior Full-Stack Developer</span></p>
                             <hr />
                             <Nav onClick={handleClick} lang={lang} />
                         </div>

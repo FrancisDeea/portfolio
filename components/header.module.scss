@@ -64,6 +64,7 @@
         align-items: flex-start;
         justify-content: flex-start;
         row-gap: 10px;
+        padding: 0 3rem 0 0;
 
         hr {
             width: 50vw;
@@ -96,4 +97,12 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.80);
     z-index: 1;    
+}
+
+@media (max-width: 600px) {
+    .small_container {
+        hr {
+            width: 60vw !important;
+        }
+    }
 }
