@@ -1,14 +1,48 @@
 @import './variables';
 
 .container {
-    @include btn;
     @include flexbox-row;
-    column-gap: 0.3rem;
     justify-content: center;
-    width: 130px;
-    font-size: 0.8rem;
-    height: 35px;
+    column-gap: 5px;
+
+    .toggle_container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+
+        border: 1px solid var(--text);
+        border-radius: 10px;
+
+        width: 40px;
+        height: 20px;
+        background-color: var(--toggle);
+
+        input[type="checkbox"] {
+            display: none;
+        }
+    }
+
+    .toggle {
+        border-radius: 50%;
+        border: 2px solid var(--text);
+
+        aspect-ratio: 1/1;
+        height: 110%;
+
+        background-color: var(--light-color);
+        position: absolute;
+        left: -3px;
+
+        transition: all 100ms ease-in-out;
+    }
+
+
+    input[type="checkbox"]:checked + .toggle {
+        left: 21px;
+    }
 }
+
 
 .icon {
     font-size: 1.2rem;

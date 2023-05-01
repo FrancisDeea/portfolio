@@ -8,6 +8,13 @@
     border-bottom: 1px solid var(--border);
 }
 
+.desktop_setting_container {
+    @include flexbox-row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+
 .logo {
     color: var(--text);
     font-weight: 600;
@@ -38,7 +45,7 @@
 
     padding: 6rem 0 0 2rem;
     background-color: var(--dark-color);
-    transition: width 0.2s cubic-bezier(0.79, 0.14, 0.15, 0.86);
+    transition: all 0.2s cubic-bezier(0.79, 0.14, 0.15, 0.86);
     overflow: hidden;
     z-index: 2;
 
@@ -64,11 +71,20 @@
             border: none;
             border-top: 1px solid;
         }
+        
+        .setting_container {
+            @include flexbox-column;
+            justify-content: center;
+            align-items: flex-start;
+            row-gap: 10px;
+        }
     }
 
     .profession {
         font-size: 0.9rem;
     }
+
+    
 }
 
 .overlay {

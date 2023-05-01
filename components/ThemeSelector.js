@@ -1,6 +1,6 @@
 import styles from './ThemeSelector.module.scss';
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 import { useTheme } from 'next-themes'
 
@@ -9,18 +9,16 @@ import { BsSun, BsMoon } from 'react-icons/bs'
 
 export default function ThemeSelector({ lang }) {
     const { theme, setTheme } = useTheme();
-    const [mounted, setMounted] = useState(false)
+    const [mounted, setMounted] = useState(false);
+    const toggle = useRef(null);
 
-    function handleClick() {
-        if (theme == "dark") {
-            setTheme("light")
-        } else if (theme == "light") {
-            setTheme("dark")
-        }
+    function handleChange(e) {
+        e.target.checked ? setTheme("dark") : setTheme("light")
     }
 
     useEffect(() => {
         setMounted(true)
+        
     }, [])
 
     if (!mounted) {
@@ -28,12 +26,12 @@ export default function ThemeSelector({ lang }) {
     }
 
     return (
-        <div className={styles.container} onClick={handleClick}>
-            {
-                theme == 'dark'
-                    ? <><BsMoon className={styles.icon} /> {lang["btn-dark-mode"]}</>
-                    : <><BsSun className={styles.icon} /> {lang["btn-light-mode"]}</>
-            }
+        <div className={styles.container} >
+            <BsMoon className={styles.icon} />
+            <label htmlFor="toggle" className={styles.toggle_container}>
+                <input id="toggle" type="checkbox" onChange={handleChange} checked={theme == "dark" ? true : false} ></input>
+                <div className={styles.toggle}></div>
+            </label>
         </div>
     )
 }

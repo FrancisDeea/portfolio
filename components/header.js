@@ -56,7 +56,7 @@ export default function Header({ font, lang }) {
                         {lang.logo}
                     </Link>
                     <Nav lang={lang} />
-                    <div className={styles.selector_container}>
+                    <div className={styles.desktop_setting_container}>
                         <LanguageSelector lang={lang} />
                         <ThemeSelector lang={lang} />
                     </div>
@@ -79,7 +79,7 @@ export default function Header({ font, lang }) {
                         <div className={styles.small_container}>
                             <p>Settings:</p>
                             <hr />
-                            <div>
+                            <div className={styles.setting_container}>
                                 <LanguageSelector lang={lang} />
                                 <ThemeSelector lang={lang} />
                             </div>
