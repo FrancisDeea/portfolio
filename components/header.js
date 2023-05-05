@@ -24,12 +24,20 @@ export default function Header({ font, lang }) {
         const overlay = overlayRef.current;
 
         if (!show) {
+            modal.style.visibility = "visible";
             modal.style.width = "80vw";
-            overlay.style.display = "block";
+
+            overlay.style.visibility = "visible";
+            overlay.style.opacity = "1"
+
             setShow(true)
         } else {
-            modalRef.current.style.width = "0vw";
-            overlay.style.display = "none";
+            modal.style.visibility = "hidden"
+            modal.style.width = "0vw";
+
+            overlay.style.opacity = "0"
+            overlay.style.visibility = "hidden";
+
             setShow(false)
         }
     }

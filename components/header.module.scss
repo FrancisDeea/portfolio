@@ -37,6 +37,7 @@
     justify-content: flex-start;
     row-gap: 30px;
 
+    visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -89,14 +90,20 @@
 }
 
 .overlay {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100vw;
     height: 100vh;
+
     background-color: rgba(0, 0, 0, 0.80);
-    z-index: 1;    
+    z-index: 1;   
+    
+    transition: opacity 0.4s cubic-bezier(0.79, 0.14, 0.15, 0.86);
 }
 
 @media (max-width: 600px) {
