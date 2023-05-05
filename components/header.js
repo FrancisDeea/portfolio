@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from 'react'
 
 import Nav from './nav'
 import LanguageSelector from './LanguageSelector'
+import LanguageSelector2 from './LanguageSelector2'
 import ThemeSelector from './ThemeSelector'
 
 import styles from './header.module.scss'
@@ -37,7 +38,6 @@ export default function Header({ font, lang }) {
 
             overlay.style.opacity = "0"
             overlay.style.visibility = "hidden";
-
             setShow(false)
         }
     }
@@ -90,7 +90,7 @@ export default function Header({ font, lang }) {
                             <p>Settings:</p>
                             <hr />
                             <div className={styles.setting_container}>
-                                <LanguageSelector lang={lang} />
+                                <LanguageSelector2 lang={lang} />
                                 <ThemeSelector lang={lang} />
                             </div>
                         </div>

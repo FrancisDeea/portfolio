@@ -78,7 +78,9 @@
             @include flexbox-column;
             justify-content: center;
             align-items: flex-start;
-            row-gap: 10px;
+            row-gap: 15px;
+
+            margin-top: 0.5rem;
         }
     }
 

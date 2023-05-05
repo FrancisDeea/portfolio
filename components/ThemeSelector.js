@@ -18,7 +18,7 @@ export default function ThemeSelector({ lang }) {
 
     useEffect(() => {
         setMounted(true)
-        
+
     }, [])
 
     if (!mounted) {
@@ -27,11 +27,12 @@ export default function ThemeSelector({ lang }) {
 
     return (
         <div className={styles.container} >
-            <BsMoon className={styles.icon} />
+            <BsSun className={styles.icon} />
             <label htmlFor="toggle" className={styles.toggle_container}>
                 <input id="toggle" type="checkbox" onChange={handleChange} checked={theme == "dark" ? true : false} ></input>
                 <div className={styles.toggle}></div>
             </label>
+            <BsMoon className={styles.icon} />
         </div>
     )
 }
