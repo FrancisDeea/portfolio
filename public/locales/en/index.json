@@ -2,5 +2,9 @@
     "h1": "Hello, I'm Francis. Junior Full-Stack Developer",
     "description": "I love developing web applications using JavaScript, React and Next as main tools. I'm located in Malaga, Spain, but I have no problem working with different time zones since I'm quite good at English. Take a look at my portfolio!",
     "btn1": "Resume",
-    "btn2": "Contact"
+    "btn2": "Contact",
+    "meta": {
+        "title": "Francis Bernal Cabra | Full-Stack Developer",
+        "description": "Hello, I am Francis, a JavaScript Full-Stack Developer based in Málaga, Spain. Check out my site!"
+    }
 }

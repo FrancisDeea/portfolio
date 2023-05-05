@@ -34,12 +34,12 @@
 
 @media (max-width: 850px) {
     .img_container {
-        width: 30vw;
-        height: 30vw;
+        width: 40vw;
+        height: 40vw;
     }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 420px) {
     .img_container {
         width: 60vw;
         height: 60vw;

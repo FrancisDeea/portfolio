@@ -1,5 +1,8 @@
 {
     "title": "Check out my latest projects",
-    "All": "All"
-
+    "All": "All",
+    "meta": {
+        "title": "Francis Bernal Cabra | Projects",
+        "description": "Check out my latest projects using React, Node, Next and much more!"
+    }
 }

@@ -101,7 +101,7 @@ export default function Header({ font, lang }) {
                         </button>
                     </div>
 
-                    <button className={styles.nav_button} onClick={handleClick}>
+                    <button className={styles.nav_button} onClick={handleClick} title="Menu">
                         <FontAwesomeIcon icon={faBars} className={styles.icon} />
                     </button>
 

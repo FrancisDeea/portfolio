@@ -1,6 +1,10 @@
 {
     "h1": "¡Hola, soy Francis. Junior Full-Stack Developer!",
     "description": "Me encanta desarrollar aplicaciones web utilizando JavaScript, React y Next como herramientas principales. Estoy situado en Málaga, España, pero no tengo problemas en trabajar con distintas zonas horarias ya que me defiendo en inglés bastante bien. ¡Echa un vistazo a mi porfolio!",
-    "btn1": "Curriculum",
-    "btn2": "Contacto"
+    "btn1": "CV",
+    "btn2": "Contacto",
+    "meta": {
+        "title": "Francis Bernal Cabra | Desarrollador Web Full-Stack",
+        "description": "Holla, Soy Francis, desarrollador Full-Stack JavaScript, ubicado en Málaga, España. ¡Echa un vistazo a mi web!"
+    }
 }

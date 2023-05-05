@@ -8,7 +8,7 @@ export default function Project({ img, name, description, stack, url, show, alt 
             <article className={styles.container}>
                 <div className={styles.img_container}>
                     <Image
-                        priority={name === "25-5 clock app"}
+                        priority={name === "Todo-list app"}
                         className={styles.image}
                         src={img}
                         alt={alt}

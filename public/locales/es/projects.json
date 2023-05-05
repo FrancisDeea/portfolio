@@ -1,5 +1,8 @@
 {
     "title": "Echa un vistazo a mis últimos proyectos",
-    "All": "Todos"
-
+    "All": "Todos",
+    "meta": {
+        "title": "Francis Bernal Cabra | Proyectos",
+        "description": "¡Echa un vistazo a mis últimos proyectos, usando React, Node y mucho más!"
+    }
 }

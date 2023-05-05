@@ -35,10 +35,9 @@ export default function Projects() {
     return (
         <>
             <Head>
-                <title>Francis Bernal Cabra | Projects</title>
-                <meta name="description" content="Check out my latest projects using React, Node, Next and much more!" />
+                <title>{t('meta.title')}</title>
+                <meta name="description" content={t('meta.description')} />
                 <meta name="keywords" content="developer, javascript, react, projects" />
-                <meta charset="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
             <section className={styles.container}>

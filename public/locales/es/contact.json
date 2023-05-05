@@ -1,4 +1,8 @@
 {
     "title": "¡Hablemos de negocios!",
-    "description": "Puedes contactarme en tu red social favorita."
+    "description": "Puedes contactarme en tu red social favorita.",
+    "meta": {
+        "title": "Francis Bernal Cabra | Contacto Desarrollador JavaScript",
+        "description": "¡Contáctame! ¡Puedo ayudarte a desarrollar tu nueva app en internet!"
+    }
 }

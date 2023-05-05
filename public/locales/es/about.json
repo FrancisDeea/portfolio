@@ -1,5 +1,9 @@
 {
     "title": "Descubre todo lo que necesitas sobre mí",
     "btn": "Contacto",
-    "btn2": "CV"
+    "btn2": "CV",
+    "meta": {
+        "title": "Francis Bernal Cabra | Sobre mí",
+        "description": "¡Descubre todo lo que necesitas saber sobre mí!"
+    }
 }

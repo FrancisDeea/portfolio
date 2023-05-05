@@ -26,14 +26,13 @@ export default function About() {
     return (
         <>
             <Head>
-                <title>Francis Bernal Cabra | About me</title>
-                <meta name="description" content="Discover all you need to know about me!" />
+                <title>{t('meta.title')}</title>
+                <meta name="description" content={t('meta.description')} />
                 <meta name="keywords" content="developer, javascript, fullstack, malaga" />
-                <meta charset="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
             <section className={styles.container}>
-                <h2 className={styles.title}>{t('title')}</h2>
+                <h2 className={styles.title}>{t('title')}</h2>g
                 <div className={styles.column_container}>
                     <aside className={styles.aside_container}>
                         <figure className={styles.fig}>
@@ -51,7 +50,7 @@ export default function About() {
                         <ul className={styles.list_info}>
                             <li><BsSuitHeartFill className={`${styles.icon} ${styles.heart}`} /><span>27 años</span></li>
                             <li><BsFillPinMapFill className={`${styles.icon} ${styles.location}`} /><span>Málaga, España</span></li>
-                            <li><BsLinkedin className={`${styles.icon} ${styles.linked}`} /><span>LinkedIn</span></li>
+                            <a href="https://www.linkedin.com/in/francis-bernal-full-stack-developer/" target="_blank" ><li><BsLinkedin className={`${styles.icon} ${styles.linked}`} /><span>LinkedIn</span></li></a>
                         </ul>
                         <div className={styles.btn_container}>
                             <Button url="/contact" value={t('btn')} />
@@ -63,7 +62,7 @@ export default function About() {
                             infos.map(item => {
                                 return (
                                     <Article
-                                        key={item.title}
+                                        id={item.title}
                                         title={item.title}
                                         description={item.description}
                                         items={item.items}

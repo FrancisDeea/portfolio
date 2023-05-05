@@ -1,4 +1,8 @@
 {
     "title": "Let's talk about business!",
-    "description": "You can contact me on your favorite social network."
+    "description": "You can contact me on your favorite social network.",
+    "meta": {
+        "title": "Francis Bernal Cabra | Contact JavaScript Developer",
+        "description": "Contact me! I can help to develop your new app on internet!"
+    }
 }

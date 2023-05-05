@@ -21,6 +21,7 @@
     --medium-color: #1c2541;
     --light-color: #3A506B;
     --text: #77a0d3;
+    --link: #abd1ff;
     --text2: #6181a8;
     --border: #2c3d51;
     --hover: ghostwhite;
@@ -82,13 +83,8 @@ a {
     font-weight: 600;
     text-decoration: none;
     display: block;
-    color: var(--text);
+    color: var(--link);
 }
 
 
-@media (max-width: 850px) {
-    a {
-        color: var(--text);
-    }
-}
 

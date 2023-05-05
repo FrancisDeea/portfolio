@@ -49,6 +49,10 @@
             li:not(:last-of-type) {
                 margin-bottom: 10px;
             }
+
+            li:last-of-type {
+                margin-top: 1rem;
+            }
             
             .icon {
                 margin-right: 0.5rem;

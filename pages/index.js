@@ -15,10 +15,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Francis Bernal Cabra | Full-Stack Developer</title>
-        <meta name="description" content="Hello, I am Francis, a JavaScript Full-Stack Developer based in Málaga, Spain. Check out my site!" />
+        <title>{t('meta.title')}</title>
+        <meta name="description" content={t('meta.description')} />
         <meta name="keywords" content="developer, javascript, react, spain" />
-        <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <section id={styles.section_container}>
@@ -30,7 +29,7 @@ export default function Home() {
             fill
             priority
             sizes="(max-width: 850px) 40vw,
-                    (max-width: 410px) 60vw,
+                    (max-width: 420px) 60vw,
                       30vw"
           />
         </div>

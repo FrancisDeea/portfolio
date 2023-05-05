@@ -10,10 +10,9 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Francis Bernal Cabra | Contact JavaScript Developer</title>
-        <meta name="description" content="Contact me! I can help to develop your new app on internet!" />
+        <title>{t('meta.title')}</title>
+        <meta name="description" content={t('meta.description')} />
         <meta name="keywords" content="developer, javascript, app, malaga" />
-        <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <section className={styles.container}>
