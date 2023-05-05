@@ -32,7 +32,7 @@ export default function About() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
             <section className={styles.container}>
-                <h2 className={styles.title}>{t('title')}</h2>g
+                <h2 className={styles.title}>{t('title')}</h2>
                 <div className={styles.column_container}>
                     <aside className={styles.aside_container}>
                         <figure className={styles.fig}>
