@@ -1,5 +1,5 @@
 import styles from '../styles/about.module.scss'
-import profilePic from '../public/assets/profile.jpg'
+import profilePic from '../public/assets/profile-cv-web.webp'
 
 import Image from 'next/image'
 import Head from 'next/head'
@@ -54,7 +54,7 @@ export default function About() {
                         </ul>
                         <div className={styles.btn_container}>
                             <Button url="/contact" value={t('btn')} />
-                            <Button url="https://google.es" value={t('btn2')} />
+                            <a href="/assets/Francis-Bernal-Cabra-Resume.pdf" className={styles.cv} download>{t('btn2')}</a>
                         </div>
                     </aside>
                     <div className={styles.article_container}>

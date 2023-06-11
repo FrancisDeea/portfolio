@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
-import profilePic from '/public/assets/profile.jpg'
-import styles from '@components/styles/Home.module.css'
+import profilePic from '/public/assets/profile-lkd-web.webp'
+import styles from '@components/styles/Home.module.scss'
 
 import Button from '../components/button'
 
@@ -28,15 +28,15 @@ export default function Home() {
             alt="a profile's photo of Francis."
             fill
             priority
-            sizes="(max-width: 850px) 40vw,
+            sizes="(max-width: 850px) 50vw,
                     (max-width: 420px) 60vw,
-                      30vw"
+                      100vw"
           />
         </div>
         <h1>{t('h1')}</h1>
         <p>{t('description')}</p>
         <div className={styles.btn_container}>
-          <Button url="https://google.es" value={t('btn1')} />
+          <a href="/assets/Francis-Bernal-Cabra-Resume.pdf" className={styles.cv} download>{t('btn1')}</a>
           <Button url="/contact" value={t('btn2')} />
         </div>
       </section>

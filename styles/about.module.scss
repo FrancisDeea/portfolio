@@ -96,6 +96,10 @@
     object-fit: cover;
 }
 
+.cv {
+    @include btn;
+}
+
 @media screen and (max-width: 1024px) {
     .column_container {
         flex-wrap: wrap;
